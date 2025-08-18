@@ -1,0 +1,19 @@
+
+ #include <iostream>
+ using namespace std;
+ class Number {
+    int value;
+ public:
+    Number(int v) : value(v) {}
+    void display() { cout << "Value: " << value << endl; }
+ };
+ Number modify(Number obj) {
+    return Number(obj);
+ }
+ int main() {
+    Number n1(10);
+    n1.display();
+    Number n2 = modify(n1);
+    n2.display();
+    return 0;
+ }
